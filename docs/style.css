@@ -1,0 +1,322 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: 'Inter', sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
+
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* =========================
+   GLOW BACKGROUND
+========================= */
+
+.bg-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+}
+
+.glow-1 {
+    width: 350px;
+    height: 350px;
+
+    background: rgba(255,255,255,0.12);
+
+    top: -120px;
+    right: -100px;
+}
+
+.glow-2 {
+    width: 300px;
+    height: 300px;
+
+    background: rgba(255,255,255,0.08);
+
+    bottom: -100px;
+    left: -100px;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+
+.main-wrapper {
+    width: 100%;
+    max-width: 420px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: rgba(255,255,255,0.96);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 32px;
+
+    padding: 28px 24px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.12);
+
+    text-align: center;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-bottom: 16px;
+
+    border: 4px solid white;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.15);
+}
+
+h1 {
+    color: #0f172a;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.role {
+    color: #2563eb;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    margin-bottom: 16px;
+}
+
+.description {
+    color: #475569;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 24px;
+}
+
+/* =========================
+   TECNOLOGÍAS
+========================= */
+
+.tech-section {
+    background: #f8fafc;
+
+    border-radius: 24px;
+
+    padding: 18px;
+
+    margin-bottom: 24px;
+}
+
+.tech-section h3 {
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+
+    color: #64748b;
+
+    margin-bottom: 14px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tech-stack span {
+    background: #e0edff;
+
+    color: #2563eb;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.btn {
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    padding: 15px 18px;
+
+    font-weight: 600;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+    cursor: pointer;
+}
+
+.btn-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+/* Azul */
+
+.btn-blue {
+    background: #63b3ed;
+    color: #0f172a;
+}
+
+.btn-blue:hover {
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.14);
+}
+
+/* Outline */
+
+.btn-outline {
+    background: white;
+
+    border: 2px solid #63b3ed;
+
+    color: #2563eb;
+}
+
+.btn-outline:hover {
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* WhatsApp */
+
+.btn-phone {
+    background: #f1f5f9;
+
+    color: #0f172a;
+}
+
+.btn-phone:hover {
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.10);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+
+    color: rgba(255,255,255,0.9);
+
+    font-size: 0.85rem;
+
+    padding-bottom: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px 14px;
+    }
+
+    .card {
+        border-radius: 28px;
+        padding: 24px 20px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .btn {
+        padding: 14px;
+    }
+
+}
